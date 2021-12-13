@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main()  {
 	fmt.Println("你好，golang")
@@ -12,5 +15,8 @@ func main()  {
 	fmt.Println("name=",name,"sex=",sex)
 	var a,b int = 30,10 // 如为int8，会造成溢出
 	fmt.Println(a*b)
+	fmt.Println("a的数据类型",reflect.TypeOf(a))
+	var typeVar interface{} = "123"
+	fmt.Println("typeVar的数据类型",reflect.TypeOf(typeVar))
 
 }
